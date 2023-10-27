@@ -33,11 +33,9 @@ import com.example.listwithcompose.data.model.StudentInfo
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AllStudents(studentList: List<StudentInfo>) {
-    Scaffold()
-    {
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
-            contentPadding = PaddingValues(it.calculateBottomPadding())
+            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 10.dp)
         ) {
             item {
                 Row(
@@ -63,6 +61,21 @@ fun AllStudents(studentList: List<StudentInfo>) {
                     imageRes = student.imageRes
                 )
             }
+
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .wrapContentHeight()
+                        .padding(vertical = 25.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        "Student List",
+                        style = MaterialTheme.typography.titleLarge
+                    )
+                }
+            }
         }
     }
-}
