@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                         StudentInfo("Ayşegül", "Bozdağ", 301, 4, R.drawable.baseline_person_24),
                         StudentInfo("Ayşegül", "Bozdağ", 302, 4, R.drawable.baseline_person_24),
                         StudentInfo("Ayşegül", "Bozdağ", 303, 4, R.drawable.baseline_person_24),
-                        StudentInfo("Ayşegül", "Bozdağ", 304, 4, R.drawable.baseline_person_24)
+                        StudentInfo("Ayşegül", "Bozdağ", 304, 4, R.drawable.baseline_person_24),
                     )
                     AllStudents(students)
                 }
