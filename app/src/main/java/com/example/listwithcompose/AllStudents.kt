@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import com.example.listwithcompose.data.model.StudentInfo
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AllStudents(studentList: List<StudentInfo>) {
         LazyColumn(
@@ -60,22 +59,6 @@ fun AllStudents(studentList: List<StudentInfo>) {
                     grade = student.grade,
                     imageRes = student.imageRes
                 )
-            }
-
-            item {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentHeight()
-                        .padding(vertical = 25.dp),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        "Student List",
-                        style = MaterialTheme.typography.titleLarge
-                    )
-                }
             }
         }
     }
